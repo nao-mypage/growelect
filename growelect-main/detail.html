@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>growelect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_header.css">
+    <link rel="stylesheet" href="css/style_footer.css">
+    <!-- <link rel="stylesheet" href="css/sub_recruit.css"> -->
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+
+<body>
+    <div data-include="parts/header.html"></div>
+
+    <main>
+        <!-- Hero -->
+        <section class="sub-hero">
+            <img src="image/test_image.png" alt="新着情報">
+            <div class="sub-hero-text">
+                <h2>詳細<br><span>Details</span></h2>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="sub-nav">
+            <a href="#detail" class="sub-nav__link">詳細</a>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <div class="sec-container">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="news.html">ニュース</a></li>
+                    <li id="breadcrumbTitle"></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ニュース詳細 -->
+        <section class="detail">
+            <div class="sec-container">
+                <div class="detail__meta">
+                    <p class="detail__date" id="newsDate"></p>
+                    <p class="detail__category" id="newsCategory"></p>                
+                </div>
+                <h1 class="detail__title" id="newsTitle"></h1>
+                <p class="detail__content" id="newsContent"></p>
+
+                <div class="detail__back">
+                    <a id="backButton" class="detail__backbutton">戻る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div data-include="parts/footer.html"></div>
+
+    <script src="js/include.js"></script>
+</body>
+</html>
+
+
+<script>
+    // URLパラメータからid取得
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if (id) {
+        fetch(`data/articles/${id}.json`)
+            .then(res => res.json())
+            .then(news => {
+                document.getElementById("breadcrumbTitle").textContent = `【記事｜${news.date.replaceAll("-", ".")}】${news.title}`;
+                document.getElementById("newsTitle").textContent = news.title;
+                document.getElementById("newsDate").textContent = news.date.replaceAll("-", ".");
+                document.getElementById("newsCategory").textContent = news.category;
+                document.getElementById("newsContent").innerHTML = news.content.replaceAll("\n", "<br>");
+            })
+            .catch(() => {
+                document.getElementById("breadcrumbTitle").textContent = `【記事｜xxxx.xx.xx】記事が見つかりません。`;
+                document.getElementById("newsTitle").textContent = "記事が見つかりません。";
+                document.getElementById("newsDate").textContent = "xxxx.xx.xx";
+                document.getElementById("newsCategory").textContent = "xx"
+                document.getElementById("newsContent").innerHTML = "テキストが存在しません。";
+            });
+    }
+
+    // 戻るボタン、どっちに返す(index.html, news.html)か決める処理
+    document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get("from");
+        const backButton = document.getElementById("backButton");
+        
+        if (from === "index") {
+            backButton.href = "index.html#news";
+        } else if (from === "news") {
+            backButton.href = "news.html";
+        } else {
+            backButton.href = "news.html";
+        }
+    });
+
+
+</script>
