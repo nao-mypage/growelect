@@ -1,0 +1,131 @@
+/* ------------------------------
+   全体構造
+------------------------------ */
+.recruit-section {
+  /* position: relative; */
+  /* background-color: #f9f9f9; */
+  /* overflow: hidden; */
+}
+
+.recruit {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-block: 3rem;
+  padding-inline: 5%;
+}
+
+/* ------------------------------
+   レイアウト
+------------------------------ */
+.recruit__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem 2rem;
+  width: 100%;
+}
+
+/* ------------------------------
+   テキストブロック
+------------------------------ */
+.recruit__text {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 45%;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.recruit__header {
+  line-height: 1.2;
+}
+
+.recruit__title {
+  display: block;
+  font-size: 3rem;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.recruit__title-en {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--main-color);
+}
+
+.recruit__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recruit__paragraph {
+  margin: 0;
+}
+
+.recruit__paragraph--small {
+  font-size: 0.95rem;
+}
+
+/* ------------------------------
+   ボタン
+------------------------------ */
+.recruit__button {
+  display: inline-block;
+  width: clamp(200px, 50%, 300px);
+  padding-block: 0.6rem;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  align-self: center;
+}
+
+.recruit__button:hover {
+  background-color: color-mix(in srgb, var(--main-color) 70%, white);
+}
+
+/* ------------------------------
+   画像
+------------------------------ */
+.recruit__image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recruit__image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ------------------------------
+   レスポンシブ
+------------------------------ */
+@media (max-width: 768px) {
+  .recruit__content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recruit__text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .recruit__image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+  }
+}
