@@ -1,0 +1,162 @@
+/* =============================
+   Business セクション全体
+============================= */
+.business-section {
+  background-color: #f9f9f9; /* 必要に応じて背景 */
+  padding-block: 3rem;
+}
+
+.business {
+  padding-inline: 5%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* =============================
+   見出し・テキスト
+============================= */
+.business__header {
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.business__title {
+  display: block;
+  font-size: 3rem;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/*.business__title-jp{font-family: 'Noto Serif JP', serif;}*/
+
+.business__title-en {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--main-color);
+}
+
+.business__text {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  width: 100%;
+}
+
+.business__description {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  margin: 0 auto 2rem auto;
+}
+
+
+
+/* =============================
+   カードリスト
+============================= */
+.business__cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* 小さい画面で折り返し */
+}
+
+/* =============================
+   各カード
+============================= */
+.business__card {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+  min-width: 250px;
+}
+
+.business__card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.business__card-content {
+  padding: 10px 20px 40px;
+  flex: 1;
+  position: relative;
+}
+
+.business__card-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.business__card-title-jp {
+  position: relative;
+  letter-spacing: 0.8em;
+}
+
+.business__card-title-jp::after {
+  content: "";
+  margin-left: -0.8em;
+}
+
+.business__card-title-en {
+  display: block;
+  font-size: 1rem;
+  color: var(--main-color);
+}
+
+.business__card-text {
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  padding-inline: 2rem;
+  text-align: left;
+}
+
+/* =============================
+   ボタン
+============================= */
+.business__card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background: var(--main-color);
+  transition: background-color 0.3s ease;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.business__card-button:hover {
+  background-color: color-mix(in srgb, var(--main-color) 70%, white);
+}
+
+/* =============================
+   レスポンシブ
+============================= */
+@media (max-width: 768px) {
+  .business__cards {
+    flex-direction: column;
+  }
+
+  .business__card {
+    width: 100%;
+  }
+
+  .business__card-title {
+    font-size: 1.4rem;
+  }
+}

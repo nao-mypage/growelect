@@ -1,0 +1,26 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+}
+.error__logo-img {
+    width: 500px;
+}
+.error__txt {
+    font-size: 3rem;
+}
+.error__txt, .error__msg {
+    padding-inline: 3rem;
+}
+
+@media (max-width: 768px) {
+    .error__logo-img {
+        width: 200px;
+    }
+    .error__txt {
+        font-size: 1.6rem;
+    }
+}
