@@ -8,6 +8,20 @@
   background: url('../photo/contact__bg.jpg') center/cover no-repeat;
 }
 
+
+
+/* アニメーション用 */
+.contact {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.contact.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* 背景オーバーレイ */
 .contact__overlay {
   position: absolute;
@@ -71,6 +85,7 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
 /* アイコン＆矢印配置 */

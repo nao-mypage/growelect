@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="当社は富山県富山市に拠点を置く、若者精鋭チームです。運送事業・通信事業についてお任せください。">
-    <meta name="keywords" content="富山,富山市,運送,宅配,配送,企業配達,富山市, 運送, 宅配, 配送, 企業配達,  通信事業, グロウエレクト, growelect">
+    <meta name="keywords" content="富山,富山市,運送,宅配,配送,企業配達,富山市 運送,宅配,配送,企業配達,通信事業,グロウエレクト,growelect,Growelect">
     <meta name="author" content="musha">
     <meta name="robots" content>
-    <meta property="og:title" content="合同会社グロウエレクト｜富山県富山市｜運送事業・通信事業ならおまかせください">
+    <meta property="og:title" content="合同会社グロウエレクト（Growelect）｜富山県富山市">
     <meta property="og:description" content="当社は富山県富山市に拠点を置く、若者精鋭チームです。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.***.com/">
-    <meta property="og:image" content="https://www.***.com/image/***.ico">
+    <meta property="og:url" content="https://www.growelect-toyama.com/">
+    <meta property="og:image" content="https://www.growelect-toyama.com/image/growelect.ico">
     <meta property="og:site_name" content="合同会社グロウエレクト｜富山県富山市">
     <meta property="og:locale" content="ja_JP">
-    <title>growelect（グロウエレクト）| 富山拠点の若者精鋭チームです。運送事業・通信事業ならおまかせください！</title>
+    <title>合同会社グロウエレクト（Growelect）｜富山県富山市</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_header.css">
     <link rel="stylesheet" href="css/style_news.css">
@@ -26,13 +26,14 @@
 </head>
 
 
-
 <body>
     
     <div data-include="parts/header.html"></div>
-
     <main>
         <section class="hero">
+            <!-- 再生バー -->
+            <div class="hero__progressbar"></div>
+
             <!-- スライドショー -->
             <div class="hero__slide hero__slide--active">
                 <img src="photo/IMG_5806.JPG" alt="img_01" class="hero__image">
@@ -47,6 +48,7 @@
             <!-- キャッチコピー -->
             <div class="hero__caption">
                 <p class="hero__caption-text"><strong>今日も、“元気”を届ける。</strong></p>
+                <p class="hero__caption-subtext">富山市に拠点を置く 運送事業・通信事業を扱う企業です。</p>
             </div>
 
             <!-- フォアグラウンド画像 -->
@@ -89,7 +91,7 @@
         
 
         <!-- わたしたちについて -->
-        <section class="about-section">
+        <section class="about-section reveal">
             <div class="about__background" aria-hidden="true">
                 <p class="about__background-text about__background-text--lt">GROW</p>
                 <p class="about__background-text about__background-text--rb">ELECT</p>
@@ -125,12 +127,11 @@
                     </div>
                 </div>                
             </div>
-
         </section>
 
 
         <!-- 採用情報 -->
-        <section class="recruit-section">
+        <section class="recruit-section reveal">
             <div class="recruit">
                 <div class="recruit__content-wrapper">
                     <div class="recruit__text">
@@ -159,7 +160,7 @@
 
 
         <!-- 事業内容 -->
-        <section class="business-section">
+        <section class="business-section reveal">
             <div class="business">
                 <div class="business__text">
                     <header class="business__header">
@@ -177,9 +178,9 @@
                 <div class="business__cards">
                     <!-- 運送業 -->
                     <article class="business__card">
-                        <div class="business__card-image">
+                        <a href="business.html#job_transportation" class="business__card-image">
                             <img src="photo/contact__bg.jpg" alt="運送業">
-                        </div>
+                        </a>
                         <div class="business__card-content">
                             <h3 class="business__card-title">
                                 <span class="business__card-title-jp">運送業</span>
@@ -194,9 +195,9 @@
 
                     <!-- 通信業 -->
                     <article class="business__card">
-                        <div class="business__card-image">
+                        <a href="business.html#job_communication" class="business__card-image">
                             <img src="photo/niwataka1.jpg" alt="通信業">
-                        </div>
+                        </a>
                         <div class="business__card-content">
                             <h3 class="business__card-title">
                                 <span class="business__card-title-jp">通信業</span>
@@ -214,7 +215,7 @@
 
 
         <!-- お問い合わせ-->
-        <section class="contact">
+        <section class="contact reveal">
             <div class="contact__overlay"></div>
             <div class="contact__container">
                 <p class="contact__subtitle">Contact</p>
@@ -226,10 +227,10 @@
                 <div class="contact__boxes">
                     <!-- 電話番号 -->
                     <div class="contact__item contact__item--phone">
-                        <div class="contact__box-content">
+                        <a href="tel:080-6351-7241" class="contact__box-content">
                             <img src="image/call.svg" alt="電話" class="contact__icon">
                             <span>080-6351-7241</span>
-                        </div>
+                        </a>
                         <div class="contact__phone-info">
                             <p><span class="contact__label">定休日</span>｜<span class="contact__value">日・祝</span></p>
                             <p><span class="contact__label">営業時間</span>｜<span class="contact__value">8:00 ～ 17:00</span></p>
@@ -238,23 +239,19 @@
 
                     <!-- お問い合わせボタン -->
                     <div class="contact__item contact__item--inquiry">
-                      <a href="contact.html" class="contact__box-content">
-                        <img src="image/mail.svg" alt="メール" class="contact__icon">
-                        <span>お問い合わせ</span>
-                        <span class="contact__arrow">＞</span>
-                      </a>
-
-                     <div class="contact__socials">
-                      
-
-                 <!-- Instagram を “同じ場所” に戻す -->
-                      <a href="https://www.instagram.com/growelect_toyama/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="contact__social-button">
-                       <img src="image/icon-instagram.svg" alt="Instagram">
-                      </a>
-                     </div>
+                        <a href="contact.html" class="contact__box-content">
+                            <img src="image/mail.svg" alt="メール" class="contact__icon">
+                            <span>お問い合わせ</span>
+                            <span class="contact__arrow">＞</span>
+                        </a>
+                        <div class="contact__socials">
+                            <a href="https://www.instagram.com/growelect_toyama/" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact__social-button">
+                                <img src="image/icon-instagram.svg" alt="Instagram">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,33 +259,15 @@
     </main>
 
     <div data-include="parts/footer.html"></div>
-      <script>
-      document.addEventListener('DOMContentLoaded', () => {
-         const slides = document.querySelectorAll('.hero__slide');
-         let currentIndex = 0;
-         function showSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.toggle('hero__slide--active', i === index);
-          });  
-         } 
-         function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            showSlide(currentIndex);
-         }   
-          // ★ 3秒ごとに切り替え
-         setInterval(nextSlide, 5000);
-          showSlide(0);
-          });
-      </script>    
-      </script>
     <script src="js/include.js"></script>
 </body>
 </html>
 
 
 
-<script>
 
+
+<script>
     // 上位N件取得(latest.jsonから) & html記載
     document.addEventListener("DOMContentLoaded", () => {
     const list = document.getElementById("newsList");

@@ -45,6 +45,27 @@ section[id] {
 }
 
 
+
+
+.hero__progressbar {
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--main-color);
+  z-index: 10;
+  transition: none;
+}
+
+.hero__progressbar--animate {
+  animation: heroProgress 5s linear forwards;  /* スライドショーの時間に合わせる */
+}
+@keyframes heroProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+
 /* スライドフェード用 */
 .hero {
   position: relative;

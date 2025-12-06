@@ -2,10 +2,16 @@
    全体構造
 ------------------------------ */
 .recruit-section {
-  /* position: relative; */
-  /* background-color: #f9f9f9; */
-  /* overflow: hidden; */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
+.recruit-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 .recruit {
   position: relative;

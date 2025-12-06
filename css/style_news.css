@@ -8,6 +8,9 @@
   margin-bottom: var(--section-gap);
 }
 
+/* アニメーション用 */
+
+
 .news__header-wrapper {
   display: flex;
   flex-wrap: wrap;

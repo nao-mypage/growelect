@@ -312,25 +312,39 @@
   z-index: 0;
 }
 
-
 .hero__caption {
-  font-family:'Noto Serif JP', serif;
   position: absolute;
-  top: 70%;
-  left: 10%;
+  top: 65%;
+  right: 10%;
   transform: translateY(-50%);
+  text-align: center;
+}
+
+.hero__caption-text {
+  font-family:'Noto Serif JP', serif;
+  margin: 0;
+  padding: 0.3rem 2.5rem;
   background: #fff;
-  padding: 0.3rem 2rem;
-  font-size: 2rem;
   font-weight: bold;
   border-bottom: 4px solid var(--main-color);
   box-sizing: border-box;
   z-index: 2;
+  font-size: clamp(1.2rem, calc(1rem + (100vw - 768px)/20), 2rem);
 }
 
-.hero__caption-text {
-  margin: 0;
-}
+.hero__caption-subtext {
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  /* font-weight: bold; */
+  text-shadow: 
+    1px 1px 4px #fff,
+    1px -1px 4px #fff,
+    -1px -1px 4px #fff,
+    -1px 1px 4px #fff,
+    0px 0px 8px #fff,
+    0px 0px 16px #fff;
+  }
 
 .hero__fg-overlay {
   position: absolute;
@@ -422,20 +436,31 @@
   outline: solid 3px white;
 }
 
-/* レスポンシブ */
 @media (max-width: 768px) {
   .hero {
     aspect-ratio: 16/11;
   }
 
   .hero__caption {
-    font-size: 1.2rem;
     position: absolute;
-    text-align: center;
     top: 70%;
     left: 50%;
+    right: 0;
     transform: translate(-50%, -50%);
     min-width: 300px;
+  }
+
+  .hero__caption-text {
+    font-size: 1rem;
+    margin: 0;
     padding: 0.3rem 1rem;
+  }
+
+  .hero__caption-subtext {
+    font-size: 0.8rem;
+  }
+
+  .hero__prev, .hero__next{
+    display: none;
   }
 }
