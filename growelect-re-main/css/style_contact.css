@@ -1,0 +1,199 @@
+/* === Contact Section === */
+.contact {
+  position: relative;
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  background: url('../photo/contact__bg.jpg') center/cover no-repeat;
+}
+
+/* 背景オーバーレイ */
+.contact__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: color-mix(in srgb, var(--main-color) 85%, transparent);
+  z-index: 1;
+}
+
+/* コンテナ */
+.contact__container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 見出しエリア */
+.contact__subtitle {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.contact__title {
+  font-size: 3rem;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.contact__description {
+  font-size: 1rem;
+  margin: 0 0 50px;
+  line-height: 1.6;
+}
+
+/* ボックスエリア */
+.contact__boxes {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5%;
+  row-gap: 40px;
+  justify-content: center;
+}
+
+/* 各アイテム */
+.contact__item {
+  flex: 1 1 48%;
+  max-width: 400px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ボックス共通デザイン */
+.contact__box-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* アイコン＆矢印配置 */
+.contact__icon,
+.contact__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact__icon {
+  left: 20px;
+  width: 35px;
+  height: auto;
+}
+
+.contact__arrow {
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* --- 電話ボックス --- */
+.contact__item--phone .contact__box-content {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+/* 電話情報 */
+.contact__phone-info {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact__phone-info p {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 0 0 5px;
+}
+
+.contact__label,
+.contact__value {
+  display: inline-block;
+}
+.contact__label {
+  width: 5em;
+}
+.contact__value {
+  width: 7rem;
+}
+
+/* --- 問い合わせボックス --- */
+.contact__item--inquiry .contact__box-content {
+  border: 2px solid #fff;
+  background: #fff;
+  color: var(--main-color);
+  transition: filter 0.3s ease;
+}
+
+.contact__item--inquiry .contact__box-content:hover {
+  filter: brightness(0.9);
+}
+
+/* SNSボタン群 */
+.contact__socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact__social-button {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.contact__social-button img {
+  width: 100%;
+  height: auto;
+}
+
+.contact__social-button:hover {
+  filter: brightness(0.8);
+}
+
+/* === レスポンシブ === */
+@media (max-width: 768px) {
+  .contact__title {
+    font-size: 2.2rem;
+  }
+
+  .contact__boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact__item {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .contact__icon {
+    left: 20px;
+    width: 25px;
+    height: auto;
+  }
+
+  .contact__box-content {
+    font-size: 1.3rem;
+  }
+
+  .contact__description {
+    font-size: 0.9rem;
+  }
+  
+}

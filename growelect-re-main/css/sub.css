@@ -1,0 +1,17 @@
+:root {
+    --section-gap: 4rem;
+}
+section {
+    margin-bottom: var(--section-gap);
+}
+/* section:last-child { */
+    /* margin-bottom: 0; */
+/* } */
+
+* {
+    outline: 1px solid red !important;
+}
+
+.mb-sm { margin: 0 0 0.5rem 0; }
+.mb-md { margin: 0 0 1rem 0; }
+.mb-lg { margin: 0 0 1.5rem 0; }

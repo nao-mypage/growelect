@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="当社は富山県富山市に拠点を置く、若者精鋭チームです。">
+    <meta name="keywords" content>
+    <meta name="author" content="musha">
+    <meta name="robots" content>
+    <meta property="og:title" content="合同会社グロウエレクト｜富山県富山市">
+    <meta property="og:description" content="当社は富山県富山市に拠点を置く、若者精鋭チームです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.***.com/">
+    <meta property="og:image" content="https://www.***.com/image/***.ico">
+    <meta property="og:site_name" content="合同会社グロウエレクト｜富山県富山市">
+    <meta property="og:locale" content="ja_JP">
+    <title>growelect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_header.css">
+    <link rel="stylesheet" href="css/style_footer.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+
+<body>
+    <div data-include="parts/header.html"></div>
+
+    <main>
+        <!-- Hero -->
+        <section class="sub-hero">
+            <img src="photo/amaharasi.jpg" alt="新着情報">
+            <div class="sub-hero-text">
+                <h2>お問い合わせ<br><span>Content</span></h2>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="sub-nav">
+            <a href="#phone-contact" class="sub-nav__link">電話でのお問い合わせ</a>
+            <a href="#mail-contact" class="sub-nav__link">メールでのお問い合わせ</a>
+        </nav>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="breadcrumb">
+            <div class="sec-container">
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li>お問い合わせ</li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 電話でのお問い合わせ -->
+        <section id="phone-contact" class="phone">
+            <div class="phone__background">
+                <p class="phone__title">
+                    電話によるお問い合わせ
+                </p>
+                <div class="phone__border"></div>
+                <p class="phone__number">
+                    070-4357-2143                  </p>
+                <p class="phone_message">
+                    受付時間 ／ 8:00 ~17:00 （〇 ~ 〇曜日）
+                </p>
+            </div>
+        </section>
+
+        <!-- メールでのお問い合わせ -->
+        <section id="mail-contact">
+            <div class="sec-container">
+                <h2 class="contact__title sec-title">メールによるお問い合わせ</h2>
+                <p class="contact__description">
+                    いただいたメッセージは確認後、返信させていただきます。<br>
+                    定休日には確認が出来ず、返信が遅くなる場合がございますが、ご了承ください。
+                </p>
+                <div class="contact__container">
+                    <!-- 入力フォーム -->
+                    <section>
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="contact-form__group">
+                                <label class="contact-form__label">お名前<span class="contact-form__required">必須</span></label>
+                                <input class="contact-form__input" type="text" name="name" placeholder="例）寺林 賢司" required>
+                                <p class="contact-form__errmsg" id="error-name"></p>
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label class="contact-form__label">会社名</label>
+                                <input class="contact-form__input" type="text" name="company" placeholder="例）〇〇株式会社">
+                                <p class="contact-form__errmsg" id="error-company"></p>
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label class="contact-form__label">メールアドレス<span class="contact-form__required">必須</span></label>
+                                <input class="contact-form__input" type="email" name="email" placeholder="例）example@mail.com" required>
+                                <p class="contact-form__errmsg" id="error-email"></p>
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label class="contact-form__label">電話番号<span class="contact-form__required">必須</span></label>
+                                <input class="contact-form__input" type="tel" id="phone" name="phone" placeholder="例）090-1234-5678" required inputmode="numeric" pattern="[0-9\-]*" maxlength="13">
+                                <p class="contact-form__errmsg" id="error-phone"></p>
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label class="contact-form__label">お問い合わせ内容<span class="contact-form__required">必須</span></label>
+                                <textarea class="contact-form__textarea" name="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
+                                <p class="contact-form__errmsg" id="error-message"></p>
+                            </div>
+
+                            <!-- プライバシーポリシー -->
+                            <section class="policy">
+                                <p class="policy__description">プライバシーポリシーをご確認ください。</p>
+                                <div class="policy__box">
+                                    <p class="policy__1stdescription">合同会社グロウエレクト（以下、「当社」）は、お客様の個人情報に関する法令を遵守し、個人情報の適切な取り扱いに努めます。</p>
+                                    <h3 class="policy__title">1．個⼈情報の取得</h3>
+                                    <p class="policy__text">当社は、業務の遂行に必要な範囲で、適正かつ公正な手段により個人情報を取得します。</p>
+                                    <div class="policy__subtexts">
+                                        <p class="policy__subtext">当社がお客さまに提供するサービスにおいて利用するため</p>
+                                        <p class="policy__subtext">お客さまからの各種お問い合わせに対するご連絡のため</p>
+                                        <p class="policy__subtext">求人応募に対するご連絡のため</p>
+                                        <p class="policy__subtext">必要に応じてお客様に情報をお届けするとともに連絡を行なうため</p>
+                                    </div>
+                                    <h3 class="policy__title">2．個⼈情報の利⽤</h3>
+                                    <p class="policy__text">当社が取得したお客さまの個人情報は、取得の際に示した利用目的の範囲内で利用し、お客さまの同意なく利用目的以外には利用いたしません。</p>
+                                    <h3 class="policy__title">3．個⼈情報の提供</h3>
+                                    <p class="policy__text">当社は、個人情報保護法等の法令に定めのある場合を除き、本人の同意を得ることなく第三者に提供することはありません。</p>
+                                    <h3 class="policy__title">4．個⼈情報の取扱いに関する法令遵守</h3>
+                                    <p class="policy__text">当社は、個人情報の取扱いに関する法令や行政機関等の定める指針等を遵守します。</p>
+                                    <h3 class="policy__title">5．個⼈情報の安全管理</h3>
+                                    <p class="policy__text">当社は、個人情報の漏洩、滅失または毀損の防止、その他の安全管理のために必要かつ適切な措置を講じます。</p>
+                                    <hr class="policy__split">
+                                    <p class="policy__2nddescription">ご不明な点および苦情・相談などがございましたら下記窓口までご連絡下さい。</p>
+                                    <p class="policy__company">合同会社グロウエレクト</p>
+                                    <p class="policy__company">〒939-8058 富山県富山市大泉２番地５</p>
+                                </div>
+                                <p class="policy__lastdescription">プライバシーポリシーに同意いただけだけましたら「入力内容を確認する」ボタンを押してください。</p>
+                            </section>
+
+                            <div class="contact-form__btnare">
+                                <button class="contact-form__button" type="submit">入力内容を確認する</button>
+                            </div>                        
+                        </form>
+                    </section>
+
+                    <!-- 確認モーダル -->
+                    <section>
+                        <div id="contact__overlay">
+                            <div id="confirmModal">
+                                <h3 class="contact__confirm_msg1">入力内容の確認</h3>
+                                <p class="contact__confirm_msg2">「送信ボタン」を押すと、メッセージが送信されます。</p>
+                                <div class="contact__confirm-item"><span class="contact__confirm_title">お名前</span>｜<span id="confirm-name"></span></div>
+                                <div class="contact__confirm-item"><span class="contact__confirm_title">会社名</span>｜<span id="confirm-company"></span></div>
+                                <div class="contact__confirm-item"><span class="contact__confirm_title">メール</span>｜<span id="confirm-email"></span></div>
+                                <div class="contact__confirm-item"><span class="contact__confirm_title">電話</span>｜<span id="confirm-phone"></span></div>
+                                <div class="contact__confirm-item"><span class="contact__confirm_title">内容</span>｜<span id="confirm-message"></span></div>
+                                <p class="contact__confirm-result" id="result-message"></p>
+                                <div class="contact__confirm-buttons">
+                                    <button class="contact__confirm-return-btn" id="backBtn" type="button">戻る</button>
+                                    <button class="contact__confirm-submit-btn" id="finalSubmit" type="button">送信</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div data-include="parts/footer.html"></div>
+
+    <script src="js/include.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
